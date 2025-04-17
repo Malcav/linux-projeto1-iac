@@ -1,19 +1,33 @@
 #!/bin/bash
+#
+#
+echo "criando usuarios"
 
+useradd carlos -G grp_adm -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd carlos -e
 
-echo "Criando usuários do sistema...."
+useradd debora -G grp_adm -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd debora -e
 
-useradd guest10 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest10 -e
+useradd josefa -G grp_adm -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd josefa -e
 
-useradd guest11 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest11 -e
+useradd maria -G grp_ven -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd maria -e
 
-useradd guest12 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest12 -e
+useradd sebas -G grp_ven -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd sebas -e
 
-useradd guest13 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest13 -e
+useradd amanda -G grp_ven -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd amanda -e
 
-echo "Finalizado!!"
+useradd joao -G grp_sec -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd joao -e
 
+useradd rob -G grp_sec -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd rob -e
+
+useradd roger -G grp_sec -c "usuario convidado" -s /bin/bash -m -p $(openssl passwd 123)
+passwd roger -e
+
+echo "encerrando"
